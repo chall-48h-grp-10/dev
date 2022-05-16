@@ -13,15 +13,16 @@
             <input type="radio" name="eventType" id="eventType" value="online">
             <label for="date">Date</label>
             <input type="datetime-local" name="" id="">
-            <label for="name">Name</label>
+            <label for="name">Nom de l'évènement</label>
             <input type="text" name="eventName" id="name">
             <label for="details">Détails</label>
             <input type="text" name="eventDetails" id="details">
         </form>
 
+        <div style="height: 400px; width: 400px;" id="map"></div>
 
     </body>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
-    AIzaSyCH9rbAM5ekcBRvcwIbqTg78q-FnIiMI7k
+    <script src="{{ asset('js/map.js') }}"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH9rbAM5ekcBRvcwIbqTg78q-FnIiMI7k&callback=initMap"></script>
 
