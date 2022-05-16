@@ -10,13 +10,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md4 col-md-offset-4" style="margin-top:20px;">
-                <h4>Page de connexion </h4>
+                <h4> Page de connexion </h4>
                 <hr>
-                <form>
+                <form action="{{route('user-connexion')}}" method="post">
+                    @csrf
                     <div class="form-group">
                         <label for="email"> Addresse E-mail</label>
                         <input type="email" class="form-control" placeholder="Entrez votre Addresse E-mail"
-                        name="email" value="">
+                        name="email" value="{{old('email')}}">
                     </div>
 
                     <div class="form-group">
