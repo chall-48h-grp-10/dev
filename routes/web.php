@@ -16,8 +16,8 @@ Route::get('/nav', function () {
     return view('nav');
 });
 
-Route::post('/user-inscription', [SignupController::class, 'userInscription']) -> user_name
+Route::post('/user-inscription', [SignupController::class, 'userInscription']) -> name
 ('user-inscription');
 
-Route::post('/user-connexion', [SignupController::class, 'userConnexion']) ->user_name
+Route::post('/user-connexion', [SignupController::class, 'userConnexion']) ->name
 ('user-connexion');

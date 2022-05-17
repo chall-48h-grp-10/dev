@@ -36,7 +36,7 @@ class SignupController extends Controller
 
     public function userConnexion(Request $request) {
         $request->validate([
-            'user_name' => 'required',
+            'username' => 'required',
             'email'=> 'required|email|unique:users',
             'password' => 'required|min:6|max:12'
         ]);
