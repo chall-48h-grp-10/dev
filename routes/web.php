@@ -11,7 +11,7 @@ Route::get('/', function () {
 Route::get('/inscription', [SignupController::class, 'inscription']);
 
 Route::get('/connexion', [SignupController::class, 'connexion']);
-Route::get('/organize', function () 
-{
-    return view('organizeEvent');
-});
+
+
+Route::get('/organize', [\App\Http\Controllers\EventController::class, 'organizeEventPage']);
+Route::post('/createEvent', [\App\Http\Controllers\EventController::class, 'createEvent']);
