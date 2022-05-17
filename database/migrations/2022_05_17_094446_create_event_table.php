@@ -13,8 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('event', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('ownerId');
+            $table->string('name');
+            $table->string('details');
+            $table->string('type');
+            $table->timestamp('date');
+            $table->integer('maxAttendant')->default(50);
+            $table->float('lat');
+            $table->float('lng');
+            $table->binary('image');
             $table->timestamps();
         });
     }

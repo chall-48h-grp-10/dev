@@ -7,7 +7,7 @@
         <title>Organiser un évènement</title>
     </head>
     <body>
-        <form action="/createEvent" method="post">
+        <form action="/createEvent" method="post" enctype="multipart/form-data">
             @csrf
             <label for="eventType">Type d'évènement</label>
             <input type="radio" name="type" id="eventType" value="offline" checked>
@@ -15,12 +15,14 @@
             <label for="eventDate">Date</label>
             <input type="datetime-local" name="date" id="eventDate">
             <label for="name">Nom de l'évènement</label>
-            <input type="text" name="eventName" id="name">
+            <input type="text" name="name" id="eventName">
             <label for="details">Détails</label>
-            <input type="text" name="eventDetails" id="details">
+            <input type="text" name="details" id="eventDetails">
 
             <input type="hidden" name="lat" id="latitude">
             <input type="hidden" name="lng" id="longitude">
+
+            <input type="file" name="img" id="eventImg" accept=".png, .jpg, .jpeg">
 
             <input type="submit" value="Créer">
         </form>
